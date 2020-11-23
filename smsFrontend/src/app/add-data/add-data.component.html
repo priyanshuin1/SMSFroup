@@ -1,0 +1,44 @@
+<button [routerLink]="['/']">View Data</button>
+
+
+<form [formGroup]="addForm">
+    <div class="container">
+      <h1>Add Data</h1>
+      <hr>
+  <div class="row">
+      <label for="email"><b>City</b></label>
+      <input type="text" placeholder="City"   formControlName="city" required>
+    </div>
+    <div class="row">
+      <label ><b>Start Date</b></label>
+      <input type="text" placeholder="start Date"  formControlName="start_date" required>
+  </div>
+  <div class="row">
+      <label ><b>End Date</b></label>
+      <input type="text" placeholder="End Date"  formControlName="end_date" required>
+      </div>
+      <div class="row">
+        <label><b>Price</b></label>
+        <input type="text" placeholder="price"  formControlName="price" required>
+      </div>
+
+      <div class="row">
+        <label><b>Statue</b></label>
+        <input type="text" placeholder="Select Status"  formControlName="status" required>
+      </div>
+<div class="row">
+    <label><b>Color</b></label>
+    <input type="text" placeholder="Color Code"  formControlName="color" required>
+</div>
+
+
+      <hr>
+  
+      <button type="submit" class="registerbtn" (click)="saveData()">Register</button>
+    </div>
+  </form>
+
+
+
+
+  

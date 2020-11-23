@@ -1,0 +1,30 @@
+<p>Here All Data</p>
+<button [routerLink]="['/AddData']">add Data</button>
+<body>
+    <!-- <table id="dtOrderExamples" data-toggle="table" data-page-size="100" data-pagination="true" data-page-list="[1,2,5]"> -->
+       <table class="table table-responsive table-hover">
+        <!-- <thead> -->
+            <tr>
+                <th data-sortable="true" (click)="sort('Id')">ID</th>
+                <th data-sortable="true" (click)="sort('city')">City</th>
+                <th data-sortable="true" (click)="sort('startDate')">Start Date</th>
+                <th data-sortable="true" (click)="sort('endDate')">End Date</th>
+                <th data-sortable="true" (click)="sort('price')">price</th>
+                <th data-sortable="true" (click)="sort('status')">status</th>
+                <th data-sortable="true" (click)="sort('color')">color</th>
+
+            </tr>
+        <!-- </thead> -->
+        <tr *ngFor="let data of all ; let i=index;">
+            <td>{{i+1}}</td>
+            <td>{{data.city}}</td>
+            <td>{{data.startDate | date}}</td>
+            <td>{{data.endDate | date}}</td>
+            <td>{{data.price}}</td>
+            <td>{{data.status}}</td>
+            <td>{{data.color}}</td>
+        </tr>
+    </table>
+
+
+</body>
